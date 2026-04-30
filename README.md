@@ -7,18 +7,18 @@ Mi Portafolio personal, navegación lateral fija y layout de dos columnas en las
 ```
 portafolio/
 ├── index.html                  ← página principal
-├── .nojekyll                   ← necesario para GitHub Pages
+├── .nojekyll                   
 ├── README.md
 └── assets/
     ├── css/
-    │   ├── variables.css       ← paleta oscura, fuentes, radios, tokens
-    │   ├── base.css            ← reset, layout principal, botones, tags
-    │   ├── nav.css             ← sidebar fija (desktop) + drawer (mobile)
-    │   └── sections.css        ← hero, sobre, habilidades, exp, proyectos, edu, contacto
+    │   ├── variables.css       
+    │   ├── base.css            
+    │   ├── nav.css            
+    │   └── sections.css        
     ├── js/
-    │   └── main.js             ← scroll suave, nav activa, animaciones de entrada
+    │   └── main.js             
     └── img/
-        ├── foto-perfil.jpg     ← reemplazar placeholder del hero
+        ├── foto-perfil.jpg     
         └── proyectos/
             ├── proyecto1.jpg
             ├── proyecto2.jpg

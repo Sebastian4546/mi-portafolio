@@ -1,0 +1,235 @@
+/* ============================================================
+   nav.css — sidebar fija a la izquierda
+   ============================================================ */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--nav-w);
+  height: 100vh;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--bg-border);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 1.75rem;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+/* Logo / marca */
+.sidebar-logo {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cyan-bright);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.4rem;
+}
+
+.sidebar-role {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
+
+/* Navegación */
+.sidebar-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--r-sm);
+  transition: color var(--transition), background var(--transition);
+  letter-spacing: 0.01em;
+}
+
+.sidebar-nav a .nav-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  opacity: 0.5;
+  transition: opacity var(--transition);
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+  color: var(--text-primary);
+  background: var(--bg-raised);
+}
+
+.sidebar-nav a:hover .nav-icon,
+.sidebar-nav a.active .nav-icon {
+  opacity: 1;
+}
+
+.sidebar-nav a.active {
+  color: var(--cyan-bright);
+}
+
+.sidebar-nav a.active .nav-icon {
+  color: var(--cyan-bright);
+}
+
+/* Separador */
+.sidebar-sep {
+  height: 1px;
+  background: var(--bg-border);
+  margin: 1.5rem 0;
+}
+
+/* Redes en la parte baja */
+.sidebar-socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.sidebar-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--bg-border);
+  color: var(--text-muted);
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.sidebar-socials a svg {
+  width: 15px;
+  height: 15px;
+}
+
+.sidebar-socials a:hover {
+  border-color: var(--cyan-mid);
+  color: var(--cyan-bright);
+}
+
+/* Indicador de estado */
+.status-dot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.status-dot::before {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+}
+
+/* ── Topbar mobile ── */
+.topbar {
+  display: none;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 56px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--bg-border);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+}
+
+.topbar-logo {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--cyan-bright);
+}
+
+.topbar-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+}
+
+.topbar-toggle span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+/* Drawer mobile */
+.mobile-drawer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+}
+
+.drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.drawer-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 260px;
+  height: 100%;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--bg-border);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.drawer-panel a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 0.7rem 0.75rem;
+  border-radius: var(--r-sm);
+  display: block;
+  transition: color var(--transition), background var(--transition);
+}
+
+.drawer-panel a:hover {
+  color: var(--text-primary);
+  background: var(--bg-raised);
+}
+
+.mobile-drawer.open {
+  display: block;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .topbar  { display: flex; }
+  .main-content { margin-left: 0; }
+}

@@ -1,4 +1,4 @@
-# Portafolio Profesional — Dark Theme
+# Portafolio Profesional 
 
 Mi Portafolio personal, navegación lateral fija y layout de dos columnas en las secciones de educación y contacto.
 

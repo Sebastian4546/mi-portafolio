@@ -1,38 +1,35 @@
-/* ============================================================
-   variables.css — dark theme tokens
-   ============================================================ */
+
 :root {
-  /* Fondos */
+
   --bg-base:    #0D0F14;
   --bg-surface: #13161D;
   --bg-raised:  #1A1E27;
   --bg-border:  #252A36;
 
-  /* Cian eléctrico — acento principal */
   --cyan-dim:    #0A2A30;
   --cyan-mid:    #0E9BAF;
   --cyan-bright: #18C8E0;
   --cyan-text:   #6EE7F5;
 
-  /* Texto */
+
   --text-primary:   #E8EDF5;
   --text-secondary: #8A93A8;
   --text-muted:     #4A5268;
 
-  /* Estado */
+
   --green: #22C55E;
 
-  /* Layout */
+
   --nav-w:      240px;
   --section-px: clamp(2rem, 5vw, 5rem);
   --section-py: 5rem;
 
-  /* Tipografía */
+
   --font-sans:  'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
   --font-mono:  'JetBrains Mono', monospace;
 
-  /* Radios */
+
   --r-sm:   6px;
   --r-md:   10px;
   --r-lg:   16px;

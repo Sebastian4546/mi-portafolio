@@ -6,7 +6,7 @@ Mi Portafolio personal, navegación lateral fija y layout de dos columnas en las
 
 ```
 portafolio/
-├── index.html                  ← página principal
+├── index.html                
 ├── .nojekyll                   
 ├── README.md
 └── assets/

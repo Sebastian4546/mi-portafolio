@@ -1,10 +1,8 @@
-/* ============================================================
-   main.js — interactividad del portafolio (dark theme)
-   ============================================================ */
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── 1. Scroll suave con offset ── */
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
       const id = anchor.getAttribute('href');
@@ -12,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!target) return;
       e.preventDefault();
 
-      // En mobile el offset es la topbar (56px), en desktop 0
+
       const isMobile = window.innerWidth <= 900;
       const offset   = isMobile ? 56 : 0;
 
@@ -21,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ── 2. Menú mobile (drawer) ── */
+
   const drawer   = document.getElementById('mobile-drawer');
   const backdrop = drawer?.querySelector('.drawer-backdrop');
   const toggle   = document.querySelector('.topbar-toggle');
@@ -36,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     drawer?.classList.remove('open');
   }
 
-  /* ── 3. Resaltar nav activa al hacer scroll ── */
+
   const sections = document.querySelectorAll('section[id], div[id]');
   const navLinks = document.querySelectorAll('.sidebar-nav a');
 
@@ -54,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(s => sectionObserver.observe(s));
 
-  /* ── 4. Aparición escalonada de tarjetas ── */
+
   const fadeTargets = document.querySelectorAll(
     '.project-item, .exp-item, .edu-item, .skill-pill, .contact-link'
   );
@@ -81,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fadeTargets.forEach(el => fadeObserver.observe(el));
 
-  /* ── 5. Año dinámico en el footer ── */
+
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 

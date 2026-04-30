@@ -1,6 +1,6 @@
 # Portafolio Profesional — Dark Theme
 
-Portafolio personal con diseño oscuro, navegación lateral fija y layout de dos columnas en las secciones de educación y contacto. Listo para GitHub Pages.
+Mi Portafolio personal, navegación lateral fija y layout de dos columnas en las secciones de educación y contacto.
 
 ## Estructura
 
@@ -41,27 +41,3 @@ portafolio/
 ### Colores (`variables.css`)
 - Fondo base: `--bg-base: #0D0F14`
 - Acento: `--cyan-bright: #18C8E0`
-- Cambiar el acento → modifica `--cyan-mid`, `--cyan-bright` y `--cyan-text`
-
-### Tu foto
-```html
-<!-- Reemplaza en index.html: -->
-<div class="hero-avatar-placeholder">...</div>
-<!-- Por: -->
-<img src="assets/img/foto-perfil.jpg" alt="Tu Nombre" />
-```
-
-### Capturas de proyectos
-```html
-<!-- Reemplaza cada: -->
-<div class="thumb-ph">...</div>
-<!-- Por: -->
-<img src="assets/img/proyectos/proyecto1.jpg" alt="Nombre proyecto" />
-```
-
-## Publicar en GitHub Pages
-
-1. Crea el repo `tuusuario.github.io`
-2. Sube todos los archivos respetando la estructura de carpetas
-3. Ve a **Settings → Pages → Branch: main → Save**
-4. Disponible en `https://tuusuario.github.io`

@@ -35,9 +35,3 @@ portafolio/
 | Experiencia | Lista compacta con período / detalle |
 | Proyectos | Filas horizontales: thumbnail + info |
 | Educación + Contacto | Dos columnas en una sola pantalla |
-
-## Personalización rápida
-
-### Colores (`variables.css`)
-- Fondo base: `--bg-base: #0D0F14`
-- Acento: `--cyan-bright: #18C8E0`
